@@ -8,6 +8,8 @@ import SubmitRecipe from './components/SubmitRecipe';
 import Favorites from './components/Favorites';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Login from './components/Login';
+import Register from './components/Register';
 
 const App = () => {
   return (
@@ -21,6 +23,12 @@ const App = () => {
       <Favorites />
       <Contact />
       <Footer />
+
+      {/* Login Modal */}
+      <Login />
+      
+      {/* Register Modal */}
+      <Register />
     </>
   );
 };
