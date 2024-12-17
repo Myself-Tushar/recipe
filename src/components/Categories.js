@@ -8,7 +8,7 @@ const categories = [
   { name: 'Vegan', img: 'https://media.cnn.com/api/v1/images/stellar/prod/191101102722-vegan-diet-stock.jpg?q=w_3000,h_2002,x_0,y_0,c_fill' },
   { name: 'Seafood', img: 'https://t3.ftcdn.net/jpg/01/16/29/76/360_F_116297634_dByDlQaap469q16Ls0qOaUVmicqAQDzu.jpg' },
   { name: 'Salads', img: 'https://www.healthyseasonalrecipes.com/wp-content/uploads/2022/06/healthy-cobb-salad-steps-sq-026.jpg' },
-  { name: 'Main Course', img: 'https://media.istockphoto.com/id/1403973419/photo/table-top-of-food-spread-on-table.jpg?s=612x612&w=0&k=20&c=2cROUMurZUtuvqF-bp8lViZ0wDXBNkZBcIjQj2QQlec=' },
+  { name: 'Dishes', img: 'https://media.istockphoto.com/id/1403973419/photo/table-top-of-food-spread-on-table.jpg?s=612x612&w=0&k=20&c=2cROUMurZUtuvqF-bp8lViZ0wDXBNkZBcIjQj2QQlec=' },
 ];
 
 const PopularCategories = () => {
