@@ -8,6 +8,9 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+  }
 .card-img-top {
     object-fit: cover; /* Ensures the image covers the space */
     width: 100%;       /* Makes sure the image scales to the container's width */
@@ -136,6 +139,11 @@ body {
     padding: 20px;
     text-align: center;
 }
+
+/* Prevent dark mode background override for the footer */
+.fixed-footer {
+    background-color: #3a3d41 !important; /* Set to bg-gray-800 (same as your default footer color) */
+  }
 
 .footer p {
     margin: 0;

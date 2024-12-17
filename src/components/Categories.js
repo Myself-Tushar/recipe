@@ -13,7 +13,7 @@ const categories = [
 
 const PopularCategories = () => {
   return (
-    <section id="categories" className="py-5 bg-light">
+    <section id="categoies">
       <div className="container">
         <h2 className="text-center section-title">Explore by Categories</h2>
         <div className="row">

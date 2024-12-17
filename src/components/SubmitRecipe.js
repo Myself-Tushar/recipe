@@ -14,7 +14,7 @@ const SubmitRecipe = () => {
   };
 
   return (
-    <section id="submit-recipe" className="py-5 bg-light">
+    <section id="submit-recipe">
       <div className="container">
         <h2 className="text-center section-title">Submit Your Recipe</h2>
         <form onSubmit={handleSubmit}>
@@ -41,14 +41,14 @@ const SubmitRecipe = () => {
             ></textarea>
           </div>
           <div className="form-group">
-            <label htmlFor="recipe-image">Upload Image</label>
-            <input
-              type="file"
-              className="form-control-file"
-              id="recipe-image"
-              onChange={(e) => setRecipeImage(e.target.files[0])}
-            />
-          </div>
+  <label htmlFor="recipe-image">Upload Image</label>
+  <input
+    type="file"
+    className="form-control-file cursor-pointer"
+    id="recipe-image"
+    onChange={(e) => setRecipeImage(e.target.files[0])}
+  />
+</div>
           <button type="submit" className="btn btn-success">
             Submit Recipe
           </button>
