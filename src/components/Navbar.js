@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 
-const Navbar = () => {
+const Navbar = ({ onSearch }) => {
   const [darkMode, setDarkMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(''); // State for search query
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.body.classList.toggle('dark-mode', darkMode);
+  };
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    onSearch(event.target.value); // Pass the search query to the parent component
   };
 
   return (
@@ -29,7 +35,13 @@ const Navbar = () => {
             <li className="nav-item"><a className="nav-link" href="#register" data-toggle="modal" data-target="#RegisterModal">Register</a></li>
           </ul>
           <form className="form-inline ml-3">
-            <input className="form-control mr-sm-2" type="search" placeholder="Search recipes..." />
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search recipes..."
+              value={searchQuery}
+              onChange={handleSearchChange} // Handle change
+            />
           </form>
         </div>
       </div>

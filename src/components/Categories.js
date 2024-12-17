@@ -19,10 +19,10 @@ const PopularCategories = () => {
         <div className="row">
           {categories.map((category, index) => (
             <div key={index} className="col-6 col-md-4 col-lg-3 mb-4">
-              <div className="card shadow-lg text-center">
+              <div className="card shadow-lg text-center category-card">
                 <img
                   src={category.img}
-                  className="card-img-top"
+                  className="card-img-top img-fluid category-img"
                   alt={category.name}
                   onError={(e) => e.target.src = 'https://via.placeholder.com/300x200'} // Fallback image
                 />

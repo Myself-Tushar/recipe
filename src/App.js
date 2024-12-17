@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './styles.css'; // Import your styles here
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import FeaturedRecipes from './components/FeaturedRecipes';
@@ -12,11 +13,18 @@ import Login from './components/Login';
 import Register from './components/Register';
 
 const App = () => {
+  const [searchQuery, setSearchQuery] = useState(''); // State for the search query
+
+  // Handle search query change
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <>
-      <Navbar />
+      <Navbar onSearch={handleSearch} /> {/* Pass the search handler to Navbar */}
       <HeroSection />
-      <FeaturedRecipes />
+      <FeaturedRecipes searchQuery={searchQuery} /> {/* Pass the search query to FeaturedRecipes */}
       <RecipeOfTheDay />
       <Categories />
       <SubmitRecipe />
