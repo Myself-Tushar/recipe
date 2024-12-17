@@ -8,6 +8,12 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.card-img-top {
+    object-fit: cover; /* Ensures the image covers the space */
+    width: 100%;       /* Makes sure the image scales to the container's width */
+    height: 200px;     /* Adjust the height as needed */
+  }
+
 /* Remove the default green outline and change focus/active styles for btn-success */
 .btn-success:focus, .btn-success:active {
     outline: none !important;  /* Remove the default outline */
