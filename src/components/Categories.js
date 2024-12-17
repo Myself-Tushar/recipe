@@ -15,7 +15,7 @@ const PopularCategories = () => {
   return (
     <section id="categoies">
       <div className="container">
-        <h2 className="text-center section-title">Explore by Categories</h2>
+        <h2 className="text-center section-title text-black dark:text-white">Explore by Categories</h2>
         <div className="row">
           {categories.map((category, index) => (
             <div key={index} className="col-6 col-md-4 col-lg-3 mb-4">
@@ -27,7 +27,7 @@ const PopularCategories = () => {
                   onError={(e) => e.target.src = 'https://via.placeholder.com/300x200'} // Fallback image
                 />
                 <div className="card-body">
-                  <h5 className="card-title">{category.name}</h5>
+                  <h5 className="card-title text-black dark:text-white">{category.name}</h5>
                   <a href="#" className="btn btn-success">
                     Explore {category.name}
                   </a>

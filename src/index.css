@@ -142,7 +142,7 @@ body {
 
 /* Prevent dark mode background override for the footer */
 .fixed-footer {
-    background-color: #3a3d41 !important; /* Set to bg-gray-800 (same as your default footer color) */
+    background-color: #313234 !important; /* Set to bg-gray-800 (same as your default footer color) */
   }
 
 .footer p {
