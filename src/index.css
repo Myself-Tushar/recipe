@@ -1,7 +1,6 @@
-
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     color: #343a40;
@@ -9,7 +8,13 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
+/* Remove the default green outline and change focus/active styles for btn-success */
+.btn-success:focus, .btn-success:active {
+    outline: none !important;  /* Remove the default outline */
+    box-shadow: none !important;  /* Remove the box-shadow */
+    background-color: #ff7f50 !important;  /* Set your desired color on click */
+    border-color: #ff7f50 !important;  /* Set the border color to match */
+}
 /* Default color for navbar brand */
 .navbar-brand {
     color: #000000; /* Black color by default */
@@ -120,7 +125,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #343a40;
+    background-color: #262626;
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -305,7 +310,7 @@ body {
 #contact .col-md-6 h4 {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #28a745;
+    color: #c33c12;
     margin-bottom: 15px;
 }
 
@@ -338,7 +343,7 @@ body {
 
 /* Hover Effect for Social Media Icons */
 #contact .social-icons a:hover {
-    color: #28a745;
+    color: #ba3800;
 }
 
 /* Spacing between the social media links */
