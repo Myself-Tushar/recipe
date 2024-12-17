@@ -1,0 +1,378 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Default color for navbar brand */
+.navbar-brand {
+    color: #000000; /* Black color by default */
+    font-weight: bold;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover and active state */
+.navbar-brand:hover, .navbar-brand:active {
+    color: #e74c3c ! important; /* Recipe project red color on hover and active state */
+    text-decoration: none; /* Remove underline */
+}
+/* Hero Section */
+.hero-secction {
+    background-image: url('https://source.unsplash.com/1600x900/?cooking');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-secction h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-secction h5 {
+    font-size: 1.2rem;
+}
+
+.hero-secction a {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 10px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero-secction a:hover {
+    background-color: #c0392b; /* A darker shade of red for hover */
+    text-decoration: none;
+}
+
+/* Recipe Cards */
+.recipe-card {
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.recipe-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Navbar */
+.navbar {
+    position: relative;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.navbar-brand:hover {
+    color: #c0392b;
+}
+
+.nav-link {
+    color: #31373e;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #e74c3c;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background-color: #222222;
+}
+
+.dark-mode .nav-link {
+    color: white;
+}
+
+.dark-mode .footer {
+    background-color: #1c1c1c;
+}
+
+.dark-mode .btn-danger {
+    background-color: #c0392b;
+}
+
+.dark-mode .btn-danger:hover {
+    background-color: #992d22;
+}
+
+/* Buttons */
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-success {
+    background-color: #ff7f50;
+    border-color: #ff7f50;
+}
+
+.btn-success:hover {
+    background-color: #ffa07a;
+    border-color: #ffa07a;
+}
+
+/* Form Inputs */
+.form-inline input {
+    border-radius: 20px;
+}
+
+/* Categories */
+#categories .card {
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#categories img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Recipe Submission */
+#submit-recipe form .form-control {
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#submit-recipe form button {
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 576px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-section {
+        padding: 100px 0;
+        font-size: 1.1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+/* Additional Styling for Features */
+.favorite-icon {
+    color: #e74c3c;
+    cursor: pointer;
+}
+
+.rating-stars i {
+    color: #ffc107;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+.dark-mode .navbar,
+.dark-mode .footer {
+    background-color: #222;
+}
+
+.dark-mode .section-title {
+    color: #ffa07a;
+}
+
+/* Navbar and Footer Styles */
+.navbar, .footer {
+    transition: background-color 0.3s ease;
+}
+
+/* Recipe Card Hover Effect */
+.recipe-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Toggle Styles */
+.dark-mode-toggle {
+    position: absolute;
+    top: 11px;
+    right: 90px; /* Position it close to the navbar-toggler */
+    background: transparent;
+    color: #121313;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem; /* Adjust size of moon icon */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #ff7f50; /* Change color on hover */
+}
+
+/* Adjust navbar for dark mode toggle positioning */
+.navbar {
+    position: relative;
+}
+
+/* Additional styling for navbar and footer in dark mode */
+.dark-mode .navbar {
+    background-color: #e6e0e0;
+}
+
+/* Contact Information Section */
+#contact .col-md-6 {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Title Styles */
+#contact .col-md-6 h4 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+/* Remove border when clicking on navbar toggler and dark mode toggle buttons */
+.navbar-toggler:focus, .dark-mode-toggle:focus {
+    outline: none; /* Removes the outline (border) */
+    box-shadow: none; /* Removes any box shadow */
+}
+
+/* Paragraph Styles */
+#contact .col-md-6 p {
+    font-size: 1rem;
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Social Media Section */
+#contact .social-icons {
+    margin-top: 20px;
+}
+
+/* Social Media Links */
+#contact .social-icons a {
+    font-size: 1.5rem;
+    color: #495057;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Social Media Icons */
+#contact .social-icons a:hover {
+    color: #28a745;
+}
+
+/* Spacing between the social media links */
+#contact .social-icons a:first-child {
+    margin-left: 0;
+}
+
+
+/* Sticky Navbar */
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+/* Add a smooth transition when switching between light and dark modes */
+.navbar, .navbar-nav .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: absolute;
+    top: 11px;
+    right: 90px; /* Position it close to the navbar-toggler */
+    background: transparent;
+    color: #121313;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem; /* Adjust size of moon icon */
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    color: #ff7f50; /* Change color on hover */
+}
