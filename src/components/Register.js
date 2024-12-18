@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const Register = () => {
-  // State to store form input values
+const Register = ({ isOpen, onClose }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,20 +22,42 @@ const Register = () => {
       return;
     }
 
-    // Here, you can add logic to register the user (e.g., API call)
     console.log('Registering with', { name, email, password });
 
     // Reset error if registration is successful
     setError('');
+    onClose(); // Close the modal after registration
   };
 
+  if (!isOpen) {
+    return null; // Don't render the modal if it's not open
+  }
+
   return (
-    <div className="modal fade" id="RegisterModal" tabIndex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+    <div className="modal-backdrop">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="RegisterModalLabel">Register</h5>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+            {/* Default close button */}
+            <button
+              type="button"
+              className="btn-close"
+              aria-label="Close"
+              onClick={onClose} // Close modal on click
+            ></button>
+
+            {/* Custom close button */}
+            <button
+              type="button"
+              className="btn-close ms-2"
+              aria-label="Close"
+              style={{ position: 'absolute', top: '10px', right: '16px', fontSize: '1.5rem' }}
+              onClick={onClose} // Close modal on click
+            >
+              &times;
+            </button>
           </div>
           <div className="modal-body">
             {error && <div className="alert alert-danger">{error}</div>}

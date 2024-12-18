@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-const Login = () => {
-  // State to store form input values
+const Login = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -23,13 +22,35 @@ const Login = () => {
     setError('');
   };
 
+  
+  // Don't render the modal if it's not open
+  if (!isOpen) {
+    return null;
+  }
+
   return (
-    <div className="modal fade" id="loginModal" tabIndex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div className="modal-backdrop">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">
             <h5 className="modal-title" id="loginModalLabel">Login</h5>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            {/* Close button */}
+            <button
+              type="button"
+              className="btn-close"
+              aria-label="Close"
+              onClick={onClose} // Call parent's close handler
+            ></button>
+            {/* Custom close button */}
+            <button
+              type="button"
+              className="btn-close ms-2"
+              aria-label="Close"
+              style={{ position: 'absolute', top: '10px', right: 'px', fontSize: '1.5rem' }}
+              onClick={onClose} // Call parent's close handler
+            >
+              &times;
+            </button>
           </div>
           <div className="modal-body">
             {error && <div className="alert alert-danger">{error}</div>}
